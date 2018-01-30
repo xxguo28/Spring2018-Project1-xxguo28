@@ -341,7 +341,7 @@ ggplot(period.summary) +
 ## Part III: Change in Topics of Presidents' Inaugrual Speeches
 
 ### Data Collection and Processing
-For topic modeling, I still use one sentence as a unit. I prepare a corpus of sentence snippets as follows. For each speech, I start with sentences and prepare a snippet with a given sentence with the flanking sentences. 
+For topic modeling, I still use one sentence as a unit. I prepare a corpus of sentence snippets as follows. 
 ```{r}
 corpus.list=sentence.list[2:(nrow(sentence.list)-1), ]
 sentence.pre=sentence.list$sentences[1:(nrow(sentence.list)-2)]
@@ -431,7 +431,7 @@ I also give the top 20 most popular words in each topic.
 ldaOut.terms
 ```
 
-Based on the most popular terms and the most salient terms for each topic, I assign a hashtag to each topic. This part is subjective because I set up these topics manually.
+Based on the most popular terms, I assign a hashtag to each topic. This part is subjective because I set up these topics manually.
 ```{r}
 topics.hash=c("Govern", "Economy" , "Responsibility", "Peace", "Unity", "Freedom", "Defense", "Reformation", "Belief", "Patriotism") 
 
