@@ -243,12 +243,7 @@ In this part, I also use one sentence as a unit.
 
 First, I want to make a further study on sentence length variation over the course of the speech, with emotions. This is a combination of sentiment change and sentence length change.
 
-Here I use the same color theme as in the movie "Inside Out."
-
-![image](http://www.staffordschools.net/cms/lib011/VA01818723/Centricity/Domain/3574/character_icon.png)
-
-(Unfortunately, I cannot find the image of color theme!)  
-
+Here I use the same color theme as in the movie "Inside Out".
 ```{r}
 par(mfrow=c(3,1), mar=c(1,0,2,0), bty="n", xaxt="n", yaxt="n", font.main=1)
 
@@ -258,11 +253,9 @@ f.plotsent.len1(In.list=sentence.list, InPeriod = 3)
 
 
 ```
-Due to the miss of details about color theme used here, the following analysis is subjective. 
+**I do not analyze these colors in detail, just make a demonstrate on the whole trend which these colorful plots show.**
 
-It makes sense that darker colors represent more intense emotions. And we often use reds to express anger, blues to express calm according to the psychology of color. 
-
-**Here, I do not analyze these colors in detail, just make a demonstrate on the whole trend which these colorful plots show.**
+I use darker colors to represent more intense emotions. 
 
 From the above pictures we can feel that the colors are becoming lighter and lighter from Period 1 to Period 3, which means that speakers' emotions are becoming calmer and calmer.
 
