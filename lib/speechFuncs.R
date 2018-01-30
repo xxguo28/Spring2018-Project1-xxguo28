@@ -1,10 +1,7 @@
 f.plotsent.len1=function(In.list, InPeriod){
   
-  col.use=c("lightgray", "red2", "darkgoldenrod1", 
-            "chartreuse3", "blueviolet",
-            "darkgoldenrod2", "dodgerblue3", 
-            "darkgoldenrod1", "darkgoldenrod1",
-            "black", "darkgoldenrod2")
+  col.use=c("lightgray", "firebrick", "lightblue2", "firebrick4", "firebrick2",  
+            "lightblue3", "firebrick1", "blueviolet", "lightblue1", "black", "lightgreen")
   
   In.list$topemotion=apply(select(In.list, 
                                   anger:positive), 
@@ -29,3 +26,4 @@ f.plotsent.len1=function(In.list, InPeriod){
        type="h", #ylim=c(-10, max(In.list$word.count))
        main=paste("Period", InPeriod))
 }
+
