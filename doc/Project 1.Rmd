@@ -2,9 +2,8 @@
 title: "What is the trend of U.S. presidents' inaugrual speeches?"
 author: "Xiaoxiao Guo; xg2282"
 date: "Jan 28, 2018"
-output:
-  pdf_document: default
-  html_notebook: default
+output: html_notebook
+  
 ---
 
 **<font size=5>Data Description</font>**  
