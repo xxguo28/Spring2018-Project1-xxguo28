@@ -336,7 +336,7 @@ ggplot(period.summary) +
   geom_line(mapping = aes(x = Period, y = positive, color = "positive")) +
   labs(y = "Attitude")
 ```
-**From this plot we can see that presidents always express more positive attitude than negative. And, there is a trend that they express more positive and less negative attitude than before.**
+**From this plot we can see that presidents always express more positive attitude than negative. Meanwhile, there is a trend that they express more positive and less negative attitude than before.**
 
 ## Part III: Change in Topics of Presidents' Inaugrual Speeches
 
@@ -352,7 +352,7 @@ rm.rows=c(rm.rows, rm.rows-1)
 corpus.list=corpus.list[-rm.rows, ]
 
 # Text mining
-docs <- Corpus(VectorSource(corpus.list$snippsets))
+docs <- Corpus(VectorSource(corpus.list$snippets))
 
 #Text basic processing
 #remove potentially problematic symbols
@@ -384,7 +384,6 @@ dtm <- DocumentTermMatrix(docs)
 for (i in 1:nrow(corpus.list)) {
     corpus.list$File[i] <- substr(corpus.list$File[i], start = 6, stop = nchar(corpus.list$File[i]) - 4)}
 rownames(dtm) <- paste(corpus.list$File, corpus.list$sent.id, sep="_")
-
 rowTotals <- apply(dtm , 1, sum) #Find the sum of words in each Document
 
 dtm  <- dtm[rowTotals> 0, ]
