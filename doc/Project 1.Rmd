@@ -29,7 +29,7 @@ In this report, I will focus my study on changes among speeches of these three p
 
 ## Part I: Change in Length of Sentences
 
-**First, I look at the change in length of sentences of presidents' inaugrual speeches.**
+**<font size=4>First, I look at the change in length of sentences of presidents' inaugrual speeches.</font>**
 
 ### Data Collection and Processing
 
@@ -119,7 +119,7 @@ sentence.list=
 
 ### Data Analysis --- Length of Sentences
 
-<font size=4>Overview of sentence length distribution by different time periods of speeches</font>
+**<font size=4>Overview of sentence length distribution by different time periods of speeches</font>**
 
 #### Period 1 (1789-1865)
 ```{r}
@@ -220,7 +220,7 @@ sentence.list%>%
   select(sentences)
 ```
 
-**The three plots above show that the length of sentences in presendents' inaugrual speeches has become shorter and shorter.**  
+**<font size=4>The three plots above show that the length of sentences in presendents' inaugrual speeches has become shorter and shorter.</font>**  
 
 In Period 1, the largest number of words in a sentence is above 120, and some sentences has more than 80 words. Most sentences has words less than 60.  
 
@@ -230,19 +230,19 @@ In Period 3, the largest number of words in a sentence is below 100, and some se
 
 **The pattern that the length of sentences in presendents' inaugrual speeches has become shorter and shorter is consistent with the change of human's expressing behavior.**  
 
-Nowadays, people prefer to express themselves in an easier way to make their ideas clear rather than use long sentences with difficult structures. 
+**<font size=4>Nowadays, people prefer to express themselves in an easier way to make their ideas clear rather than use long sentences with difficult structures.</font>** 
 
 
 ## Part II: Change in Emotions of Speakers
 
-**I continue my research with sentiment changes of speakers.**
+**<font size=4>I continue my research with sentiment changes of speakers.</font>**
 In this part, I also use one sentence as a unit.
 
 ### Data Analysis --- Length of Sentences with Sentiment Analysis
 
-First, I want to make a further study on sentence length variation over the course of the speech, with emotions. This is a combination of sentiment change and sentence length change.
+**<font size=4>First, I want to make a further study on sentence length variation over the course of the speech, with emotions. This is a combination of sentiment change and sentence length change.</font>**
 
-It makes sense that I use darker colors to represent more intense emotions. In addition, blues stand for good feelings (joy, trust, anticipation) and reds stand for bad feelings (anger, disgust, fear, sadness), blueviolet stands for surprise which is neutral. I also use dark to show negative attitude and lightgreen to show positive attitude. 
+**It makes sense that I use darker colors to represent more intense emotions. In addition, blues stand for good feelings (joy, trust, anticipation) and reds stand for bad feelings (anger, disgust, fear, sadness), blueviolet stands for surprise which is neutral. I also use dark to show negative attitude and lightgreen to show positive attitude.** 
 ```{r}
 # feelings: "anger" "anticipation" "disgust" "fear" "joy" "sadness" "surprise" "trust"  "negative" "positive" 
 # corresponding colors: "firebrick", "lightblue2", "firebrick4", "firebrick2","lightblue3", "firebrick1", "blueviolet", "lightblue1", "black", "lightgreen"
@@ -256,14 +256,14 @@ f.plotsent.len1(In.list=sentence.list, InPeriod = 3)
 
 ```
 
-Now we can see that there are few reds in these plots, which is consistent with our intuition that presidents always express good emotions when giving speeches. Moreover, the colors are becoming lighter and lighter from Period 1 to Period 3, which means that speakers' emotions are becoming calmer and calmer.
+**Now we can see that there are few reds in these plots, which is consistent with our intuition that presidents always express good emotions when giving speeches. Moreover, the colors are becoming lighter and lighter from Period 1 to Period 3, which means that speakers' emotions are becoming calmer and calmer.**
 
-**This change is rational because people now can control their emotions better than before. In addition, the following presidents may gain some experience about how to express their emotions in speeches from the previous president. Therefore, they can express themselves in a less radical way.**
+**<font size=4>This change is rational because people now can control their emotions better than before. In addition, the following presidents may gain some experience about how to express their emotions in speeches from the previous president. Therefore, they can express themselves in a less radical way.</font>**
 
-Moreover, these plots also show the pattern that the length of sentences in speeches is becoming shorter and shorter.
+**Moreover, these plots also show the pattern that the length of sentences in speeches is becoming shorter and shorter.**
 
 ### Data Analysis --- Clustering of Emotions
-Next, I will show a more detailed study on emotion change of speakers among three different periods.
+**<font size=4>Next, I will show a more detailed study on emotion change of speakers among three different periods.</font>**
 
 First, I give the heatmaps of speaker's emotions in these three periods.
 ```{r,fig.width=1.4, fig.height=1.4}
@@ -281,8 +281,8 @@ heatmap.2(cor(sentence.list%>%filter(Period==3)%>%select(anger:trust)),
           col = redblue(100),  margin=c(6, 6), key=F,
           trace = "none", density.info = "none")
 ```
-In my opinion, the extend of darkness represent the degree of correlation between two emotions.  
-Therefore, I think the correlation between positive emotions bocome higher and the correlation between negative emotions bocome lower than before, which means **presidents now express more positive emotions than before.** 
+**In my opinion, the extend of darkness represent the degree of correlation between two emotions.**  
+**Therefore, I think the correlation between positive emotions bocome higher and the correlation between negative emotions bocome lower than before, which means <font size=4>presidents now express more positive emotions than before.</font>** 
 
 The following plots give us a straight view of the distributions of emotions in these three periods. 
 ```{r, fig.width=2.7, fig.height=0.9}
@@ -301,9 +301,9 @@ col.use=c("firebrick", "lightblue2", "firebrick4", "firebrick2",
 barplot(emo.means[order(emo.means)], las=2, col=col.use[order(emo.means)], horiz=T, main="Period 3")
 ```
 
-These plots give us a better view. It is clear that good feelings (blues) rank higher than bad feelings (reds) in general. And in Period 1, fear is in the third place of the emotion expression. However, in Period 2, joy become the third place of the emotion expression. In addition, the negative emotions like disgust, sadness and anger have a less weight than before.
+**These plots give us a better view. It is clear that good feelings (blues) rank higher than bad feelings (reds) in general. And in Period 1, fear is in the third place of the emotion expression. However, in Period 2, joy become the third place of the emotion expression. In addition, the negative emotions like disgust, sadness and anger have a less weight than before.**
 
-**Thus, I will say that presidents today express more positive emotions than before and this change is also reasonable.**
+**<font size=4>Thus, I will say that presidents today express more positive emotions than before and this change is also reasonable.</font>**
 
 The following plot illustrates my view clearly.
 ```{r, fig.height=1, fig.width=2.5}
@@ -321,12 +321,12 @@ ggplot(period.summary) +
   geom_line(mapping = aes(x = Period, y = positive, color = "positive")) +
   labs(y = "Attitude")
 ```
-**From this plot we can see that presidents always express more positive attitude than negative. Meanwhile, there is a trend that they express more positive and less negative attitude than before.**
+**<font size=4>From this plot we can see that presidents always express more positive attitude than negative. Meanwhile, there is a trend that they express more positive and less negative attitude than before.</font>**
 
 ## Part III: Change in Topics of Presidents' Inaugrual Speeches
 
 ### Data Collection and Processing
-For topic modeling, I still use one sentence as a unit. I prepare a corpus of sentence snippets as follows. 
+**<font size=4>For topic modeling, I still use one sentence as a unit. I prepare a corpus of sentence snippets as follows.</font>** 
 ```{r}
 corpus.list=sentence.list[2:(nrow(sentence.list)-1), ]
 sentence.pre=sentence.list$sentences[1:(nrow(sentence.list)-2)]
@@ -465,22 +465,22 @@ legend("topright", topics.hash, cex = 0.8, fill = rainbow(length(topic.per.3)))
 
 
 ```
-From the plots, we know that Responsibility and Govern play important roles in Period 1, Peace and Denfense play important roles in both Period 2 and Period 3. However, Peace and Denfense cover over 2/3 topic in Period 3. 
+**From the plots, we know that Responsibility and Govern play important roles in Period 1, Peace and Denfense play important roles in both Period 2 and Period 3. However, Peace and Denfense cover over 2/3 topic in Period 3.** 
 
-**I think this change of topics is also consistent with the development of our society, since people care more about living a peaceful life now.**
+**<font size=4>I think this change of topics is also consistent with the development of our society, since people care more about living a peaceful life now.</font>**
 
 ## Conclusion:
-From my study, I will draw a conclusion that the trend of presidents' speeches from 1789 to 2017 correspond with the development of our human behaviours.  
+**<font size=5>From my study, I will draw a conclusion that the trend of presidents' speeches from 1789 to 2017 corresponds with the development of our human behaviours.</font>** 
 
-1. Sentences become shorter than before, which implies that people are pursuing an simpler way to express themselves.  
+**<font size=4>1. Sentences become shorter than before, which implies that people are pursuing an simpler way to express themselves.</font>**  
 
-2. Less radical in sentiment means people now can control their emotion well and can always keep calm. In addition, people now become more possitive than before.  
+**<font size=4>2. Less radical in sentiment means people now can control their emotion well and can always keep calm. In addition, people now become more possitive than before.</font>**  
 
-3. Topic change of speeches reflects our thoughts. It shows what kind of life we are living in or we want to live in.
+**<font size=4>3. Topic change of speeches reflects our thoughts. It shows what kind of life we are living in or we want to live in.</font>**
 
 ## Appendix: Word Cloud
 
-**In the end, I want to show the word clouds of speeches in three different periods.**  
+**<font size=4>In the end, I want to show the word clouds of speeches in three different periods.</font>**  
 (This is not part of my story, I just do this for fun.)
 
 ### Data Collection and Processing  
@@ -546,7 +546,7 @@ tdm.overall.3=summarise(group_by(tdm.tidy.3, term), sum(count))
 
 ### Data Analysis --- Wordclouds  
 
-**Make wordclouds of speeches in three different periods using TF-IDF weighted document-term matrices.**  
+**<font size=4>Make wordclouds of speeches in three different periods using TF-IDF weighted document-term matrices.</font>**  
 
 As I would like to identify interesting words for speeches in each period, I use [TF-IDF](https://en.wikipedia.org/wiki/Tf%E2%80%93idf) to weigh each term within speeches in each period. It highlights terms that are more widely-used in a particular period. 
 
