@@ -1,5 +1,5 @@
 ---
-title: "What is the trend of U.S. presidents' inaugrual speeches?"
+title: "What does the trend of U.S. presidents' inaugrual speeches reflect?"
 author: "Xiaoxiao Guo; xg2282"
 date: "Jan 28, 2018"
 output: html_notebook
@@ -14,16 +14,18 @@ The data comprises of 58 inaugrual speeches, from that of George Washington to t
 
 First of all, I must admit that I am not good at politics, so I choose to tell my story just from the data itself and do not make any comment on politics.
 
-The main question of my research is to analyse the trend of presidents' inaugrual speeches according to the 58 inaugrual speeches we have from 1789-2017. Specifically, I want to tell a story from the following three aspects:
+The main question of my research is to analyse the trend of presidents' inaugrual speeches according to the 58 inaugrual speeches we have from 1789-2017 and think about what these changes reflect. Specifically, I want to tell a story from the following three aspects:
 
 1. Change in length of sentences in presidents' inaugrual speeches
 2. Change in speakers' emotions with presidents' inaugrual speeches
 3. Change in topics of presidents' inaugrual speeches
 
 In order to analyse these changes of presidents' inaugrual speeches in these years, I split the data into three parts according to the date of these speeches:  
-Period 1: 1789-1865, George Washington-Abraham Lincoln (20 speeches)  
-Period 2: 1866-1945, Ulysses S. Grant-Franklin D. Roosevelt (20 speeches)  
-Period 3: 1946-2017, Harry S. Truman-Donald J. Trump (18 speeches)
+Period 1: 1789-1865, George Washington-Abraham Lincoln (20 speeches, 14 presidents)  
+Period 2: 1866-1945, Ulysses S. Grant-Franklin D. Roosevelt (20 speeches, 14 presidents)  
+Period 3: 1946-2017, Harry S. Truman-Donald J. Trump (18 speeches, 12 presidents)
+
+**It is reasonable to divide the data into such three parts because the time interval is almost same and the number of speeches and presidents in each period is close to each other.**
 
 In this report, I will focus my study on changes among speeches of these three periods and tell my own story.
 
@@ -470,7 +472,7 @@ legend("topright", topics.hash, cex = 0.8, fill = rainbow(length(topic.per.3)))
 **<font size=4>I think this change of topics is also consistent with the development of our society, since people care more about living a peaceful life now.</font>**
 
 ## Conclusion:
-**<font size=5>From my study, I will draw a conclusion that the trend of presidents' speeches from 1789 to 2017 corresponds with the development of our human behaviours.</font>** 
+**<font size=5>From my study, I will draw a conclusion that the trend of presidents' speeches from 1789 to 2017 reflects the development of our human behaviours and thoughts.</font>** 
 
 **<font size=4>1. Sentences become shorter than before, which implies that people are pursuing an simpler way to express themselves.</font>**  
 
