@@ -1,5 +1,5 @@
 # Spring 2018
-# Project 1: What did the presidents say at their inauguation?
+# Project 1: What did the presidents say at their inauguration?
 
 ![image](figs/title.jpg)
 
